@@ -1,6 +1,6 @@
 # Título do Projeto 💯:
 
-Site para orçamento de tatuagens
+Site para orçamento de tatuagens de um estúdio
 
 # Objetivos 🎯:
 

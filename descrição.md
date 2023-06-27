@@ -4,7 +4,7 @@ Site para orçamento de tatuagens
 
 # Objetivos 🎯:
 
-O site de orçamentos para tatuagens visaria proporcionar aos usuários uma experiência conveniente e transparente ao procurar informações sobre tatuagens, solicitar orçamentos, agendar compromissos e se conectar com artistas qualificados.
+O site de orçamentos para tatuagens visará proporcionar aos usuários uma experiência conveniente e transparente ao procurar informações sobre tatuagens, solicitar orçamentos, agendar compromissos e se conectar com artistas qualificados de um estúdio específico.
 
 # Público-Alvo 🙆‍♂️:
 

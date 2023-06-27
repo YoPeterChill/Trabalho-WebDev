@@ -2,11 +2,11 @@
 
 Site para orçamento de tatuagens
 
-# Objetivos:
+# Objetivos 🎯:
 
 O site de orçamentos para tatuagens visaria proporcionar aos usuários uma experiência conveniente e transparente ao procurar informações sobre tatuagens, solicitar orçamentos, agendar compromissos e se conectar com artistas qualificados.
 
-# Público-Alvo:
+# Público-Alvo 🙆‍♂️:
 
 O público-alvo pode variar, mas geralmente inclui pessoas interessadas em obter uma nova tatuagem ou que estejam explorando a ideia de fazer uma.
 - Curiosos
@@ -14,7 +14,7 @@ O público-alvo pode variar, mas geralmente inclui pessoas interessadas em obter
 - Novatos em tatuagens
 - Entusiastas de tatuagens
 
-# Mercado:
+# Mercado 💸:
 
 O mercado de tatuagens tem experimentado um crescimento significativo nos últimos anos e se tornou uma indústria lucrativa em muitos países ao redor do mundo. O mercado de tatuagens atende a uma ampla variedade de clientes, desde jovens adultos até pessoas mais maduras. A demanda abrange diferentes grupos demográficos, incluindo homens e mulheres, de diversas origens étnicas e profissões. A presença online tem se tornado cada vez mais importante para os estúdios de tatuagem. Muitos artistas e estúdios têm sites, perfis em redes sociais e outras plataformas online para mostrar seus trabalhos, se conectar com os clientes e promover seus serviços.
 

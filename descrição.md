@@ -18,7 +18,7 @@ O público-alvo pode variar, mas geralmente inclui pessoas interessadas em obter
 
 O mercado de tatuagens tem experimentado um crescimento significativo nos últimos anos e se tornou uma indústria lucrativa em muitos países ao redor do mundo. O mercado de tatuagens atende a uma ampla variedade de clientes, desde jovens adultos até pessoas mais maduras. A demanda abrange diferentes grupos demográficos, incluindo homens e mulheres, de diversas origens étnicas e profissões. A presença online tem se tornado cada vez mais importante para os estúdios de tatuagem. Muitos artistas e estúdios têm sites, perfis em redes sociais e outras plataformas online para mostrar seus trabalhos, se conectar com os clientes e promover seus serviços.
 
-# Regras de negócio da aplicação ❗ :
+# Regras de negócio da aplicação ❗ 
 
 1- Cadastro de usuários: A aplicação permite que os usuários se cadastrem, fornecendo informações básicas como nome, endereço de e-mail e senha. Isso permite que eles acessem recursos adicionais, como solicitar orçamentos, agendar compromissos e salvar suas preferências.
 

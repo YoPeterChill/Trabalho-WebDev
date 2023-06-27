@@ -21,7 +21,9 @@ O mercado de tatuagens tem experimentado um crescimento significativo nos últim
 # Regras de negocio da aplicação:
 
 1- Cadastro de usuários: A aplicação permite que os usuários se cadastrem, fornecendo informações básicas como nome, endereço de e-mail e senha. Isso permite que eles acessem recursos adicionais, como solicitar orçamentos, agendar compromissos e salvar suas preferências.
+
 2- Solicitação de orçamentos: Os usuários podem solicitar orçamentos para projetos de tatuagem específicos, preenchendo um formulário com detalhes como tamanho, estilo, localização no corpo e qualquer requisito adicional. Essas informações serão enviadas aos artistas relevantes para que eles possam fornecer estimativas de custo.
+
 3- Portfólios e avaliações de artistas: A aplicação permite que os artistas criem perfis que incluam seus portfólios, mostrando trabalhos anteriores e sua especialidade em estilos específicos. Além disso, os usuários podem avaliar e deixar comentários sobre a experiência com os artistas, ajudando outros usuários a tomar decisões informadas.
 
 Os itens acima podem modificar conforme o andamento do projeto...

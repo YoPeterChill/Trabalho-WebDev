@@ -1,2 +1,7 @@
 # Trabalho01-WebDev
-Repositório para a disciplina de Desenvolvimento Web
+
+
+  #Integrantes:
+  -Pedro Augusto Borges Assis 
+  -João Marcos Cordeiro
+  -Angellycarllen

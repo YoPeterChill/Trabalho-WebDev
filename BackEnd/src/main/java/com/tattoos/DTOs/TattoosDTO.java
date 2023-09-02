@@ -31,7 +31,7 @@ public class TattoosDTO extends RepresentationModel <TattoosDTO> implements Seri
 		private Float largura ;
 		private Status status;
 		private Float altura;
-		public void TattosDTO(ModelTattoos obj) {
+		public TattoosDTO(ModelTattoos obj) {
 			id = obj.getId();
 			local = obj.getLocal();
 			especificacoes = obj.getEspecificacoes();

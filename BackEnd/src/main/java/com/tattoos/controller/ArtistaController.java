@@ -23,34 +23,34 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.tattoos.DTOs.TattoosDTO;
-import com.tattoos.service.TattoosService;
+import com.tattoos.DTOs.ArtistaDTO;
+import com.tattoos.service.ArtistaService;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
 @RestController
-@RequestMapping ("/v1/slz/Tattoos")
-@Tag(name = "Endpoint de Tattoos")
-public class TattoosController {
+@RequestMapping ("/v1/slz/Artista")
+@Tag(name = "Endpoint de Artista")
+public class ArtistaController {
 
     @Autowired
-    private TattoosService service;
+    private ArtistaService service;
     
 	@GetMapping
-	@Operation(summary = "Busca todas os Tattooss")
-	@Tag(name = "Endpoint de Tattoos")
-	public ResponseEntity<CollectionModel<TattoosDTO>> buscarTodos(
+	@Operation(summary = "Busca todas os Artista")
+	@Tag(name = "Endpoint de Artista")
+	public ResponseEntity<CollectionModel<ArtistaDTO>> buscarTodos(
 				@RequestParam(value="page", defaultValue = "0") int page,
 				@RequestParam(value="limit", defaultValue = "12") int limit,
 				@RequestParam(value="1direction", defaultValue = "asc") String direction) {
 			Direction sortDirection = "desc".equalsIgnoreCase(direction) ? Direction.DESC : Direction.ASC;
-			Pageable pageable = PageRequest.of(page, limit, Sort.by(sortDirection, "id"));
-			Page<TattoosDTO> pages = service.findAll(pageable);
+			Pageable pageable = PageRequest.of(page, limit, Sort.by(sortDirection, "nome"));
+			Page<ArtistaDTO> pages = service.findAll(pageable);
 			pages
 				.stream()
 				.forEach(p -> p.add(
-						linkTo(methodOn(TattoosController.class).findById(p.getId())).withSelfRel()
+						linkTo(methodOn(ArtistaController.class).findById(p.getId())).withSelfRel()
 					)
 				);
 			return ResponseEntity.ok(CollectionModel.of(pages));
@@ -58,9 +58,9 @@ public class TattoosController {
 	
 	@GetMapping("/{id}")
 	@Operation(summary = "Busca um proprietÃ¡rio por id")
-	public ResponseEntity<TattoosDTO> findById(@PathVariable Integer id) {
-			TattoosDTO objDTO = service.findById(id);
-			objDTO.add(linkTo(methodOn(TattoosController.class).findById(id)).withSelfRel());
+	public ResponseEntity<ArtistaDTO> findById(@PathVariable Integer id) {
+			ArtistaDTO objDTO = service.findById(id);
+			objDTO.add(linkTo(methodOn(ArtistaController.class).findById(id)).withSelfRel());
 			return ResponseEntity.ok(objDTO);
 		}	
 
@@ -68,23 +68,23 @@ public class TattoosController {
 	
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
-	@Operation(summary = "Insere uma nova Tattoos")
-	public ResponseEntity<TattoosDTO> incluir(@RequestBody TattoosDTO objBody) {
-		TattoosDTO objDTO = service.save(objBody);
-		objDTO.add(linkTo(methodOn(TattoosController.class).findById(objDTO.getId())).withSelfRel());
+	@Operation(summary = "Insere uma nova Artista")
+	public ResponseEntity<ArtistaDTO> incluir(@RequestBody ArtistaDTO objBody) {
+		ArtistaDTO objDTO = service.save(objBody);
+		objDTO.add(linkTo(methodOn(ArtistaController.class).findById(objDTO.getId())).withSelfRel());
 		return ResponseEntity.ok(objDTO);
 	}
 
 	@PutMapping
-	@Operation(summary = "Atualiza uma Tattoos")
-	public ResponseEntity<TattoosDTO> atualizar(@RequestBody TattoosDTO objBody) {
-		TattoosDTO objDTO = service.update(objBody);
-		objDTO.add(linkTo(methodOn(TattoosController.class).findById(objDTO.getId())).withSelfRel());
+	@Operation(summary = "Atualiza um Artista")
+	public ResponseEntity<ArtistaDTO> atualizar(@RequestBody ArtistaDTO objBody) {
+		ArtistaDTO objDTO = service.update(objBody);
+		objDTO.add(linkTo(methodOn(ArtistaController.class).findById(objDTO.getId())).withSelfRel());
 		return ResponseEntity.ok(objDTO);
 	}	
 	
 	@DeleteMapping("/{id}")
-	@Operation(summary = "Exclui uma Tattoos por id")
+	@Operation(summary = "Exclui uma Artista por id")
 	public ResponseEntity<Void> excluir(@PathVariable Integer id) {
 		if (!service.existById(id)) {
 			return ResponseEntity.notFound().build();

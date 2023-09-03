@@ -1,8 +1,5 @@
 package com.tattoos.service;
 
-
-//import java.util.ArrayList;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -11,19 +8,17 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.tattoos.DTOs.TattoosDTO;
 import com.tattoos.models.ModelTattoos;
-import com.tattoos.service.exceptions.BusinessExceptions;
-import com.tattos.DAO.TattoosDAO;
+import com.tattoos.repository.TattoosDAO;
+import com.tattoos.services.exceptions.BusinessExceptions;
 
 import lombok.AllArgsConstructor;
-@AllArgsConstructor
+
 @Service
  public class TattoosService {
+	
 	@Autowired
 	private TattoosDAO dao;
-	
-	
-	
-	
+
 	@Transactional(readOnly = true)
 	public Page<TattoosDTO> findAll(Pageable pageable) {
 		Page<ModelTattoos> result = dao.findAll(pageable);
@@ -42,7 +37,7 @@ import lombok.AllArgsConstructor;
 			
 	}
   
-	@Transactional
+	@Transactional(readOnly = true)
 	public TattoosDTO update(TattoosDTO obj) {
 		ModelTattoos entity = dao.findById(obj.getId())
 				.orElseThrow(() -> new BusinessExceptions("Registros n達o encontrados!!!"));
@@ -58,7 +53,7 @@ import lombok.AllArgsConstructor;
 	}	
 	
 	
-	@Transactional
+	@Transactional(readOnly = true)
 	public TattoosDTO save(TattoosDTO obj) {
 		ModelTattoos entity = new ModelTattoos(obj.getId(),obj.getLocal(),obj.getEspecificacoes(),obj.getReferenciasURL(),obj.getAltura(),obj.getLargura(),obj.getStatus());
 				
@@ -68,7 +63,7 @@ import lombok.AllArgsConstructor;
 		return new TattoosDTO(dao.save(entity));
 	}
 	
-	@Transactional
+	@Transactional(readOnly = true)
 	public void deleteById(Integer id) {
 			dao.deleteById(id);
 	}

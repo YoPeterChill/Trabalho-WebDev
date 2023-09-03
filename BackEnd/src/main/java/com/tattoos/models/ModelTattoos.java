@@ -25,6 +25,7 @@ public class ModelTattoos implements Serializable{
 public enum Status{
 	ANDAMENTO,PAGO, CANCELADO
 }
+
 @Id
 @EqualsAndHashCode.Include
 @GeneratedValue(strategy = GenerationType.IDENTITY)

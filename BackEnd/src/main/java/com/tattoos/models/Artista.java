@@ -35,4 +35,6 @@ public class Artista implements Serializable{
 @Column(name="endereco")
 	private String endereco ;
 
+
+
 }

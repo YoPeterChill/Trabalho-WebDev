@@ -1,12 +1,15 @@
 package com.tattoos.models;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -26,10 +29,12 @@ public enum Status{
 	ANDAMENTO,PAGO, CANCELADO
 }
 
+
 @Id
 @EqualsAndHashCode.Include
 @GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+@Column(name="id")	
+private int id;
 @Column(name="local")
 	private String local ;
 @Column(name="espec")
@@ -42,4 +47,20 @@ public enum Status{
 	private Float largura ;
 @Column(name="status")
 	private Status status;
+
+@OneToMany(mappedBy = "tattoos")
+private List<Artista> artista = new ArrayList<>();
+
+public ModelTattoos(int id, String local, String especificacoes, String referenciasURL, Float altura, Float largura,
+		Status status) {
+	super();
+	this.id = id;
+	this.local = local;
+	this.especificacoes = especificacoes;
+	this.referenciasURL = referenciasURL;
+	this.altura = altura;
+	this.largura = largura;
+	this.status = status;
+}
+
 }

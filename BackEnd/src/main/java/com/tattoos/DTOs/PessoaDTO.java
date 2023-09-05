@@ -26,6 +26,9 @@ public class PessoaDTO extends RepresentationModel<PessoaDTO> implements Seriali
 	private int Id;
 	
 	@NotBlank
+	private String senha;
+	
+	@NotBlank
 	private String nome;
 	
 	@NotBlank
@@ -48,6 +51,7 @@ public class PessoaDTO extends RepresentationModel<PessoaDTO> implements Seriali
 
 	public PessoaDTO(Pessoa obj) {
 		this.Id = obj.getId();
+		this.senha= obj.getSenha();
 		this.nome = obj.getNome();
 		this.cpf = obj.getCpf();
 		this.data = obj.getData();

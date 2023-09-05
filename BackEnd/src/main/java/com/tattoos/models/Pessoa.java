@@ -59,5 +59,9 @@ public class Pessoa implements Serializable {
     @Column(name = "telefone_pessoa")
     private String telefone;
     
+    @Column(name = "senha")
+    private String senha;
+    
+    
 
 }

@@ -5,10 +5,8 @@ import java.util.Date;
 
 import org.springframework.hateoas.RepresentationModel;
 
-import com.tattoos.models.Artista;
+import com.tattoos.models.Cliente;
 
-import jakarta.persistence.Column;
-import jakarta.validation.constraints.NotBlank;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -17,30 +15,20 @@ import lombok.Setter;
 @Getter
 @Setter
 @EqualsAndHashCode(onlyExplicitlyIncluded = true, callSuper = false)
-public class ArtistaDTO extends RepresentationModel <ArtistaDTO> implements Serializable {
+public class ClienteDTO extends RepresentationModel<ClienteDTO> implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@EqualsAndHashCode.Include
-		private int id;
-	@NotBlank
+		private int id;	
 		private String senha;
-	@NotBlank
-		private String photoURL;
-	@NotBlank
 	    private String nome;
-	@NotBlank
 	    private String cpf;
-	@NotBlank
 	    private Date data;
-	@NotBlank
 	    private String email;
-	@NotBlank
 	    private String escolaridade;
-	@NotBlank
 	    private String profissao;
-	@NotBlank
 	    private String telefone;
 		
-		public ArtistaDTO(Artista obj) {
+		public ClienteDTO(Cliente obj) {
 			this.id = obj.getId();
 			this.senha = obj.getSenha();
 			this.nome = obj.getNome();

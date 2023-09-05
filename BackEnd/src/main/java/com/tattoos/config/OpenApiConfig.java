@@ -15,9 +15,9 @@ public class OpenApiConfig {
 	OpenAPI customOpenApi() {
 		return new OpenAPI()
 				.info(new Info()
-				.title("API RESTful Solidarize construída com Spring Boot 2.5.0")
+				.title("API RESTful Tattoos construída com Spring Boot 2.5.0")
 				.version("V1")
-				.description("Sistema Solidarize")
+				.description("Tattoos")
 				.termsOfService("http://swagger.io/terms")
 				.license(new License().name("Apache 2.0").url("http://springdoc.org")));
 			

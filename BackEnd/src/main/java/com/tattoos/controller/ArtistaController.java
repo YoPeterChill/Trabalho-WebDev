@@ -57,7 +57,7 @@ public class ArtistaController {
 		}
 	
 	@GetMapping("/{id}")
-	@Operation(summary = "Busca um proprietÃ¡rio por id")
+	@Operation(summary = "Busca um artista por id")
 	public ResponseEntity<ArtistaDTO> findById(@PathVariable Integer id) {
 			ArtistaDTO objDTO = service.findById(id);
 			objDTO.add(linkTo(methodOn(ArtistaController.class).findById(id)).withSelfRel());
